@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="anian.mapper.ClientInfoManage">
+    <select id="selectClientInfo" resultType="anian.entity.ClientInfo">
+        select * from clientinfo
+    </select>
+    
+    <insert id="insertClientInfo" parameterType="anian.entity.ClientInfo">
+        insert into clientinfo values (#{id},#{name},#{sex},#{cell})
+    </insert>
+
+</mapper>
